@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+body {
+  height: 100vh;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f2f7fe;
+}
+
+.header__title {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #3a3a3a;
+}
+
+.divider {
+  width: 50px;
+  background-color: #9dcceb;
+  border: 1px solid #9dcceb;
+  margin: 0 auto;
+}
+main {
+  min-width: 300px;
+  margin-top: 25px;
+}
+.container {
+  max-width: 300px;
+  max-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 1px 4px 5px #a7a6a6;
+}
+
+.is-active {
+  animation: animationIn 1s ease-in;
+}
+
+.container__img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+}
+.container__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 3px 0px #9dcceb;
+}
+
+.simbol {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #9dcceb;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.6rem;
+  padding-top: 2px;
+  color: white;
+  left: 0;
+  top: 6px;
+}
+
+.container__info h2 {
+  margin-bottom: 2px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.container__info h4 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #73a6c9;
+}
+
+.container__review p {
+  text-align: center;
+  padding: 0 15px;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: rgb(155, 155, 155);
+}
+.container__surprise,
+.container__actions {
+  margin-bottom: 5px;
+}
+.btn {
+  width: 20px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.btn i {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #9dcceb;
+}
+
+.btn-action {
+  width: 60px;
+  padding: 2px;
+  height: auto;
+  outline: none;
+  border: 1px solid #9dcceb;
+  border-radius: 3px;
+  background-color: #cfe1ec;
+  color: #53a6dd;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+@keyframes animationIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

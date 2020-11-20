@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+
+  font-size: 62.5%;
+}
+body {
+  background-color: #f2f7fe;
+  min-width: 320px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav {
+  position: absolute;
+  max-width: 280px;
+  min-width: 220px;
+  min-height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #ffffff;
+  display: none;
+}
+.nav__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.nav__title {
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__title h2 {
+  margin: 10px 0;
+  font-size: 1.8rem;
+  color: #686868;
+}
+
+.nav__title h2:hover {
+  color: #247cb6;
+}
+
+.nav__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__list--social {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 120px;
+}
+
+.nav__list li {
+  height: 37px;
+  width: 100%;
+  margin-bottom: 5px;
+  padding-top: 8px;
+}
+.nav__list li:hover {
+  background-color: #cfedfd;
+  color: #247cb6;
+}
+
+.nav__list li:hover > a {
+  color: #247cb6;
+}
+.nav__list li a {
+  padding-left: 10px;
+
+  color: #686868;
+  font-size: 1.6rem;
+}
+.nav__list li a:hover {
+  color: #247cb6;
+}
+
+.nav__list--social li a {
+  color: #247cb6;
+  font-size: 2.5rem;
+  margin: 0 10px;
+}
+
+.nav__list--social li a i:hover {
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+.menu:active,
+.menu:hover,
+.close:hover {
+  color: #247cb6;
+}
+.menu {
+  font-size: 4rem;
+  margin-right: 35px;
+  color: black;
+}
+
+.close {
+  margin-right: 35px;
+  color: red;
+  font-size: 3rem;
+}
+@keyframes animationIn {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes animationOut {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: -300px;
+  }
+}
+
+.is-active {
+  display: flex;
+  animation: animationIn 0.4s linear;
+}
