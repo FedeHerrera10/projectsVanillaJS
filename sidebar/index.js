@@ -3,7 +3,7 @@ const $navBar = document.getElementById('nav');
 const $btnClose = document.getElementById('close');
 
 $menu.addEventListener('click', () => {
-    
+    console.log('si');
     if($navBar.classList.contains('is-active')){
         $navBar.style.animation ="animationOut 1s ease-out forwards";
         
@@ -24,5 +24,4 @@ $btnClose.addEventListener('click', () => {
     if($navBar.classList.contains('is-active')){
         $navBar.style.animation ="animationOut 1s ease-out forwards";
     }    
-    
 });

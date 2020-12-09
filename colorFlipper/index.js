@@ -24,6 +24,7 @@ $btnChangeColor.addEventListener('click', () => {
 $spanColor.addEventListener('click', () => {
     copyToClipboard();
     $labelCopy.style.display ='inline'
+    $labelCopy.style.transition='1s';
 })
 
 function copyToClipboard(){

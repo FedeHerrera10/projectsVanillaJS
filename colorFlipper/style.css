@@ -1,34 +1,55 @@
+/*-- Variables -- */
+
+:root {
+  --font-primary: "Roboto", sans-serif;
+  --font-secundary: "Open Sans", sans-serif;
+  --font-size-bg: 3.2rem;
+  --font-size-xs: 2.4rem;
+  --font-size-title: 2rem;
+  --color-primary: #063251;
+  --color-primary: #ff0000;
+  --color-hover: #398ab9;
+  --color-white: #ffffff;
+  --color-bg: #f1f5f8;
+  --color-black: #222222;
+  --min-width: 320px;
+  --max-width-md: 450px;
+  --max-width-lg: 600px;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
-  font-family: sans-serif;
+  font-family: var(--font-primary);
 }
-body {
+
+.flex--style {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body {
   flex-direction: column;
   width: 100%;
-  min-width: 340px;
+  min-width: var(--min-width);
   height: 100vh;
+  background-color: var(--color-bg);
 }
 
 .header {
   width: 100%;
-  min-width: 340px;
-  height: 30px;
-  background-color: #e7e7e7;
+  height: 48px;
+  background-color: var(--color-white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .header__nav {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 1px 2px #a7a6a6;
+  box-shadow: 0px 1px 2px (var(--color-white));
 }
 
 .header__nav--list {
@@ -39,53 +60,49 @@ body {
 }
 
 .header__nav--list li a {
+  font-family: var(--font-primary);
   font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
   text-decoration: none;
-  color: #559fca;
+  text-transform: capitalize;
+  color: var(--color-primary);
 }
 
 .header__nav--list li a:hover {
-  color: #348fc4;
+  color: var(--color-hover);
 }
 
 .main {
   width: 100%;
   height: 100%;
-  min-width: 340px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
 }
 
 .container {
   width: 100%;
   height: auto;
-  min-width: 340px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .container__color {
-  min-width: 260px;
-  margin: 0 30px;
-  height: 58px;
-  display: flex;
-  align-items: center;
-  margin: 25px;
-  background-color: black;
-  border-radius: 3px;
+  width: 100%;
+  max-width: var(--max-width-md);
+  height: 80px;
+  margin-bottom: 25px;
+  background-color: var(--color-black);
+  border-radius: 10px;
 }
 
 .container__color h2 {
   position: relative;
   padding-left: 7px;
-  font-size: 1.6rem;
+  font-size: var(--font-size-xs);
+  text-align: center;
   color: white;
 }
 
 .container__color--hex {
-  font-size: 1.6rem;
+  font-size: var(--font-size-xs);
   color: #559fca;
   text-transform: uppercase;
   cursor: pointer;
@@ -93,28 +110,67 @@ body {
 
 .copy p {
   position: absolute;
-  top: -15px;
-  right: -25px;
-  font-size: 1.1rem;
-  color: red;
-  transition: 1s ease-in;
+  top: -16px;
+  right: 7px;
+  font-size: 1.2rem;
+  color: var(--color-red);
+  letter-spacing: 0.2rem;
+  animation: latido 1s infinite alternate;
   display: none;
 }
 
 .btn-change-color {
-  height: 28px;
-  width: 80px;
+  height: 47px;
+  width: 165px;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.4rem;
   outline: none;
   border: none;
-  border: 1px solid black;
-  border-radius: 3px;
+  border: 2px solid var(--color-black);
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
   background-color: transparent;
-  transition: 0.1s ease-in-out;
 }
 
+.btn-change-color:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transition: 0.4s ease-in-out;
+}
 .btn-change-color:active {
   transform: scale(0.9);
+  transition: 0.4s ease-in-out;
+}
+
+/* -- Animaciones -- */
+
+@keyframes latido {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* -- Media Querys -- */
+
+@media screen and (min-width: 800px) {
+  .header {
+    height: 55px;
+  }
+  .header__nav--list li a {
+    font-size: var(--font-size-title);
+  }
+  .container__color {
+    max-width: var(--max-width-lg);
+  }
+  .container__color h2,
+  .container__color--hex {
+    font-size: var(--font-size-bg);
+  }
 }
