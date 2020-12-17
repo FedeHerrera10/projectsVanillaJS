@@ -1,0 +1,99 @@
+/*-- Variables -- */
+
+:root {
+  --font-primary: "Roboto", sans-serif;
+  --font-secundary: "Open Sans", sans-serif;
+  --color-bg-gray: #f1f5f8;
+  --color-bg-tabs: #dae2ec;
+  --color-text: #617d98;
+  --color-title: #102a42;
+  --color-bg-blue: #49a6e9;
+  --min-width: 350px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: var(--font-primary);
+}
+
+body {
+  width: 100%;
+  min-width: var(--min-width);
+  background-color: var(--color-bg-gray);
+}
+
+.header {
+  margin-top: 30px;
+
+  width: 100%;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: var(--color-title);
+}
+
+form {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 2rem;
+  color: var(--color-title);
+}
+
+.header__form-box {
+  width: 150px;
+  height: 30px;
+  margin-left: 5px;
+  border-radius: 5px;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+}
+
+input {
+  padding-left: 5px;
+}
+
+input:focus {
+  border: 1px solid var(--color-text);
+}
+
+button {
+  background-color: var(--color-bg-blue);
+}
+
+button:active {
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
+}
+
+.main {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.paragraph {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 10px;
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--color-text);
+  padding: 10px;
+  line-height: 2rem;
+}

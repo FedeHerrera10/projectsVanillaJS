@@ -1,0 +1,142 @@
+/*-- Variables -- */
+
+:root {
+  --min-width: 320px;
+  --max-width: 1024px;
+  --font-primary: "Roboto", sans-serif;
+  --font-secundary: "Open Sans", sans-serif;
+  --color-title: #1a6aa2;
+  --color-text-black: #102a42;
+  --color-gray: #829ab0;
+  --color-white: #ffffff;
+  --color-bg: #f1f5f8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: var(--font-primary);
+}
+
+body {
+  width: 100%;
+  min-width: var(--min-width);
+  /* max-width: var(--max-width); */
+  height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.header__img {
+  width: 100%;
+}
+
+.header__title h3 {
+  padding-top: 20px;
+  font-size: 2rem;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+
+  color: var(--color-title);
+}
+
+.main {
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.date__launch h4 {
+  font-size: 1.4rem;
+  font-family: var(--font-primary);
+  text-transform: capitalize;
+  letter-spacing: 0.4rem;
+  color: var(--color-text-black);
+}
+
+.description__container {
+  margin-top: 30px;
+}
+
+.description__container p {
+  font-size: 1.6rem;
+  color: #829ab0;
+  line-height: 2.5rem;
+}
+
+.date__container {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date__container-box {
+  min-width: 50px;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-text-black);
+  color: var(--color-white);
+}
+
+.date__container-box h3 {
+  font-size: 3.2rem;
+  font-family: var(--font-primary);
+}
+
+.date__container-box h4 {
+  font-size: 1.4rem;
+  font-family: var(--font-secundary);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .header__title h3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    justify-content: center;
+    align-items: center;
+  }
+  .main,
+  .header__title h3 {
+    margin: 0;
+    padding: 0;
+  }
+  .main {
+    margin-right: 5px;
+  }
+
+  .date__container {
+    padding: 0;
+    padding-top: 20px;
+  }
+}
