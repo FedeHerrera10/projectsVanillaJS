@@ -17,14 +17,10 @@
 
 body {
   background-color: var(--color-body);
+  min-width: 300px;
+  height: 100%;
 }
-.header {
-  min-width: 449px;
-  max-width: 1024px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .header__title {
   margin: 20px 0;
   font-size: 2rem;
@@ -34,32 +30,32 @@ body {
 }
 
 .main {
-  min-width: 449px;
-  max-width: 1024px;
-  height: auto;
+  min-width: 300px;
+  width: 100%;
+  height: calc(100vh - 70px);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
-  margin-left: 20px;
+  padding: 0 5px;
 }
 
 .container {
-  min-width: 320px;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   background-color: var(--color-blue);
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .container__input {
   width: 70%;
   height: auto;
-  margin-top: 30px;
 }
 
 input {
@@ -80,8 +76,6 @@ input {
   display: grid;
   grid-template: repeat(4, 50px) / repeat(4, 25%);
   grid-gap: 5px;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .btn {

@@ -4,61 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Agregar enlace de FontAwensome-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>ToDo List Vanilla JS</title>
 </head>
 <body>
     
 <header class="header">
-    
-    <nav class="header__nav">
-        <h1 class="header__title"><a href="#">Todo List Vanilla JS</a></h1>
-        <ul class="header__nav--actions">
-            <li><a href="#" id="showInputs"><i class="fas fa-plus"></i></a></li>
-        </ul>
-    </nav>
-    <div class="header__inputs" id="headerInputs">
-        <h2>Agregar Tareas</h2>
-        <div class="inputs">
-            <input type="text" name="descripcion" id="descripcion" placeholder="Nueva Tarea">
-            <select name="select" id="selectPrioridad">
-            <option value="baja" class="baja">Baja</option> 
-            <option value="media"class="media">Mediana</option>
-            <option value="alta" class="alta">Alta</option>
-          </select>
-        </div>
-        <div class="header__buttons">
-          <button class="btn primary" id="agregar">Agregar<i class="fas fa-folder-plus"></i></button>
-          <button class="btn danger" id="cancelar">Cancelar <i class="fas fa-window-close"></i></button>
-        </div>
-        
-        </div>
-    </div>
-    
+    <h1>Todo List</h1>
 </header>
 
- <main>
-    <section class="countTask">
-        <div class="countTask--title">
-            <h2>Lista de Tareas</h2>
-        </div>
-        <div class="countTask-detail">
-        <p class="countTask__label total" id="total"><b>Total:</b> 3</p>
-        <p class="countTask__label success" id="terminadas"><b>Terminadas:</b> 2</p>
-        <p class="countTask__label pending" id="pendientes"> <b>Pendientes</b> 1</p>
-    </div>
+<main class="container">
+    <section class="task">
+        <form action="#">
+            <div class="input-search">
+                <span><i class="fas fa-clipboard-list"></i></span>
+                <input type="text" id="task" placeholder="Ingresa tu tarea">
+            </div>
+            <div class="button-actions">
+             <button class="btn-enviar" id="btn-enviar"><i class="fas fa-plus-circle"></i></button>
+             <span class="loading"><i class="fas fa-circle-notch fa-spin"></i></span>
+            </div>
+        </form>
     </section>
-    
-    <hr class="division">
-    <div class="container-details" id="containerDetails"></div>
-    
-    
+
+        <!-- <section class="list-task">
+        <div class="task-filter">
+            <button class="btn-filter">TODO</button>
+            <button class="btn-filter">DONE</button>
+            <button class="btn-filter">ALL</button>
+        </div>
+        </section> -->
 </main>
-<section class="actionClear">
-    <a href="#" id="clear">Borrar Todo<i class="far fa-trash-alt"></i></a>
-    <button class='btn success' id='btn-guardar'>Guardar</button>
-</section>
-<script src="index.js" type="module"></script>
+
+
+<script src="index.js"></script>
 
 </body>
 </html>

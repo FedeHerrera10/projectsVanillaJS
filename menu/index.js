@@ -74,4 +74,61 @@ const menu = [
   ];
 
 
-  
+  const menuResult = document.querySelector('#menu-result');
+  const divFilters = document.querySelector('#filters');
+
+  /*Load all menu in DocumentoContentLoaded */
+
+  window.addEventListener('DOMContentLoaded', () => {
+    loadMenu('all');
+  })
+
+  document.addEventListener('click', (e) => {
+    const targetElement = e.target;
+    if(targetElement.className === 'btn'){
+      const filter = targetElement.innerText.toLowerCase()
+      loadMenu(filter);
+    }
+  })
+
+ /* Filter menu */
+  function loadMenu(filter){
+    let elementsArr = [];
+    if(!filter || filter === 'all'){
+      elementsArr = menu;
+    } else{
+      elementsArr = menu.filter(item => item.category === filter.toLowerCase())
+    }
+    const result = createElementResult(elementsArr);
+    render(result);
+  }
+
+  /* Create html */
+  function createElementResult(arr){
+    if(arr.length > 0){
+      let result='';
+      arr.map(item => {
+         result += `<div class="menu-container">
+                <div class="menu__image">
+                    <img src="${item.img}" alt="">
+                </div>
+                <div class="menu__info">
+                    <div class="menu__info-precio">
+                        <h2>${item.title}</h2>
+                        <h3>$${item.price}</h3>
+                    </div>
+                    <div class="menu__info-resumen">
+                        <p>${item.desc}</p>
+                    </div>
+                </div>
+            </div>`
+      })
+      return result;
+    }
+  }
+
+  /* Insert html in result div */
+  function render(result){
+    menuResult.innerHTML = '';
+    menuResult.innerHTML = result;
+  }
