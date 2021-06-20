@@ -34,6 +34,9 @@ body {
 }
 .nav__title {
   margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav__title h2 {
@@ -99,7 +102,6 @@ body {
 .menu:active,
 .menu:hover {
   color: var(--color-blue);
-  transform: rotate(90deg);
 }
 
 @media screen and (max-width: 786px) {
@@ -109,6 +111,9 @@ body {
 
   .nav {
     justify-content: space-between;
+  }
+  .nav__title {
+    width: 100%;
   }
   .nav__list {
     position: absolute;

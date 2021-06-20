@@ -3,6 +3,7 @@ const $navBar = document.getElementById('nav-list');
 
 $menu.addEventListener('click', () => {
 
+
     if($navBar.classList.contains('is-active')){
         $navBar.style.animation ="animationOut 1s ease-out forwards";
         
