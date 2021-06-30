@@ -1,0 +1,239 @@
+:root {
+  --font-primary: "Roboto", sans-serif;
+  --font-secundary: "Open Sans", sans-serif;
+  --color-primary: #1b1a1d;
+  --color-gray: #303234;
+  --color-ocuped: #38e7f7;
+  --color-available: #43cca1;
+  --color-white: #a0a0a0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-primary);
+}
+
+main {
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0.8rem;
+}
+
+.select-movie-container {
+  margin-top: 2rem;
+}
+label {
+  display: inline-block;
+  margin: 0.8rem 0;
+  font-size: 1.8rem;
+  color: var(--color-white);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2b2833;
+  background-image: none;
+  flex: 1;
+  padding: 0 1rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-family: "Open Sans", sans-serif;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  line-height: 3;
+  background: #222027cc;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  font-size: 1.7rem;
+  color: #43cca1;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0.5rem;
+  background: var(--color);
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+
+option {
+  font-size: 1.6rem;
+}
+
+option:hover {
+  background: red;
+}
+.select:hover::after {
+  color: #23b499;
+}
+
+.description-container {
+  margin: 2rem 0;
+  width: 100%;
+}
+.div-info {
+  display: inline-block;
+}
+.div-description {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  margin: 0 1rem;
+}
+.div-info h4 {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--color-white);
+}
+
+.div-info:nth-of-type(1) .div-description {
+  background-color: var(--color-gray);
+}
+
+.div-info:nth-of-type(2) .div-description {
+  background-color: var(--color-ocuped);
+}
+
+.div-info:nth-of-type(3) .div-description {
+  background-color: var(--color-available);
+}
+
+.screen {
+  width: 80%;
+  margin: 2rem auto;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-align: center;
+  position: relative;
+}
+.container-screen {
+  perspective: 1000px;
+}
+.pantalla {
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgb(255 255 255 / 70%);
+}
+
+.screen::before {
+  content: "";
+  width: calc(40% - 0.8rem);
+  height: 0.1rem;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-right: 0.3rem;
+}
+
+.screen::after {
+  content: "";
+  width: calc(40% - 0.8rem);
+  height: 0.1rem;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-right: 0.3rem;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat {
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: var(--color-available);
+  display: inline-block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.seat:nth-of-type(3),
+.seat:nth-of-type(7) {
+  margin-right: 2.5rem;
+}
+.row:nth-of-type(1) .seat:nth-of-type(1),
+.row:nth-of-type(1) .seat:nth-of-type(5) {
+  margin-right: 2.9rem;
+}
+.row:nth-of-type(2) .seat:nth-of-type(2),
+.row:nth-of-type(2) .seat:nth-of-type(6) {
+  margin-right: 3.2rem;
+}
+.row:nth-of-type(1) .seat:nth-of-type(3),
+.row:nth-of-type(2) .seat:nth-of-type(3),
+.row:nth-of-type(2) .seat:nth-of-type(7) {
+  margin: 0;
+}
+
+.available {
+}
+.seat:hover {
+  transform: scale(1.2);
+}
+
+.selected {
+  background-color: red;
+}
+
+.seat.ocuped {
+  background-color: var(--color-gray);
+  transform: scale(1);
+}
+
+.container-ticket {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.result-ticket,
+.result-ticket span {
+  color: var(--color-white);
+  font-size: 2.2rem;
+}
+
+.result-ticket span {
+  color: #38e7f7;
+  opacity: 0.8;
+}
