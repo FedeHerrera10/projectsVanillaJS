@@ -1,0 +1,141 @@
+:root {
+  --color-body: #3f3f3f;
+  --color-white: #f0ebeb;
+  --color-grey: #d3d3d3;
+  --color-green: #2f936c;
+  --color-black: #252a2d;
+  --color-btn: #7476f6;
+  --fuente: "Roboto", sans-serif;
+  --shadow: 0.1rem 0.1rem 1rem black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+h1 {
+  margin: 3rem 0;
+  text-align: center;
+  font-size: 3rem;
+  font-family: var(--fuente);
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: var(--color-white);
+}
+
+.video {
+  cursor: pointer;
+  width: 100%;
+  min-width: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px -3px 15px black;
+}
+video[poster] {
+  width: 100%;
+}
+
+.btn {
+  background-color: transparent;
+  width: 3rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  color: var(--color-grey);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn i {
+  font-size: 2.5rem;
+}
+
+.container {
+  width: 100%;
+  min-width: 200px;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  margin: 0.1rem 1rem;
+  background: var(--color-black);
+  box-shadow: 0px -3px 15px black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+}
+
+.slider-range {
+  width: 90%;
+  margin: 0 1rem;
+}
+
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: var(--color-grey); /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--color-btn); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--color-btn); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.timestamp {
+  font-size: 1.8rem;
+  font-family: var(--fuente);
+  margin-right: 1rem;
+  color: #f0ebeb;
+}
+
+@media screen and (min-width: 768px) {
+  .video,
+  .container {
+    width: 100%;
+    max-width: 1000px;
+  }
+  video[poster] {
+    width: 90%;
+  }
+}

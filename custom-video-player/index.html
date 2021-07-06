@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>Custom Video Player</title>
+</head>
+<body>
+    <h1>Custom Video Player</h1>
+    <video src="video.mp4" class="video" poster="play.png" id="videoplayer"></video>
+    <div class="container">
+        <button class="btn" id="btn-play"><i class="fas fa-play"></i></button>
+        <button class="btn" id="btn-stop"><i class="fas fa-stop"></i></button>
+        <div class="slider-range">
+            <input type="range"  id="time" min="0" max="100" step="0.1" value="0" class="slider">
+        </div>
+        <span class="timestamp">00:00</span>
+    </div>
+
+<script src="index.js"></script>
+</body>
+</html>
