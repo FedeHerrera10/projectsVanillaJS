@@ -123,7 +123,8 @@ function createDate(){
 
 function setValuesBalance(){
     let total =0;
-
+    expensesValue=0;
+    income=0;
     expensesArr.length > 0 
         ? expensesArr.map(exp => {
             createUITransactions('expense',exp)
