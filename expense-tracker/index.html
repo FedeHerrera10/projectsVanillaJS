@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>Expenses Tracker</title>
+</head>
+<body>
+    <header>
+        <h1>Expenses Tracker</h1>
+    </header>
+    <main>
+
+        <div class="container-info">
+            <section class="balance">
+                <h3>Total balance</h3>
+                <p class="total"></p>
+                <div class="balance-info">
+                    <div class="container-balance-info">
+                        <span class="icon-balance"><i class="fas fa-arrow-up"></i></span>
+                        <div class="container-balance-info--detail">
+                            <h5>Income</h5>
+                            <p class="incomeValue"></p>
+                        </div>
+                    </div>
+
+                    <div class="container-balance-info">
+                        <span class="icon-balance"><i class="fas fa-arrow-down"></i></span>
+                        <div class="container-balance-info--detail">
+                            <h5>Expenses</h5>
+                            <p class="expensesValue"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="history">
+                <div class="container-history-card">
+                </div>
+            </section>
+        </div>
+         <section class="form-container">
+            <h2>Add Expenses</h2>
+            <div class="container-button">
+                <div class="container-switch rigth"></div>
+                <button class="btn-type active">Expenses</button>
+                <button class="btn-type">Income</button>
+            </div>
+            <form action="#" id="form">
+                <input type="number" name="expenses" id="expenses" value=0 step="0.1">
+                <button type="submit" class="btn-save">Save</button>
+                <p class="error"></p>
+            </form> 
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
