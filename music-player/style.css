@@ -1,0 +1,179 @@
+:root {
+  --color-body: #261d46;
+  --color-black: #212121;
+  --color-img: #28bac0;
+  --color-white: #fdfdfd;
+  --color-btn: #828183;
+  --font: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-body);
+  display: flex;
+}
+
+.container-media {
+  display: flex;
+  margin: 10px 0 0 5px;
+  border-radius: 15px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.audio-img {
+  width: 180px;
+  height: 180px;
+  margin: 0 5px;
+  animation: giro 2s linear infinite paused;
+}
+
+.play-music {
+  animation: giro 2s linear infinite paused;
+}
+
+@keyframes giro {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sound-poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--color-img);
+  border: 0.4rem solid rgb(40, 186, 192, 0.2);
+  box-shadow: 0px 0px 30px 10px var(--color-img);
+}
+
+.container-info h2 {
+  margin: 40px 0 15px 5px;
+  padding-left: 1rem;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  display: inline-block;
+  color: var(--color-white);
+}
+
+.container-info i {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.slider-range {
+  margin: 15px 0 10px 10px;
+  width: 95%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 98%;
+  height: 0.6rem;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 5px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  background: var(--color-img); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--color-img); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.timestamp {
+  font-size: 1.6rem;
+  margin: 0.6rem 0;
+  padding-right: 0.8rem;
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+  color: var(--color-white);
+}
+
+.container-controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-prev,
+.btn-next {
+  border: none;
+  outline: none;
+  background: transparent;
+  margin: 0 1.5rem;
+  cursor: pointer;
+}
+
+.btn-prev i,
+.btn-next i {
+  font-size: 3.5rem;
+  color: var(--color-btn);
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-prev:hover > i,
+.btn-next:hover > i {
+  color: white;
+}
+
+.btn-play {
+  border: none;
+  outline: none;
+  background: var(--color-img);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+.btn-play i {
+  padding: 1rem 1.4rem;
+  font-size: 3.5rem;
+  color: var(--color-white);
+}
+
+.btn-play:hover {
+  opacity: 0.9;
+}

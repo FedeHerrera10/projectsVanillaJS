@@ -32,7 +32,6 @@ btnPlay.addEventListener('click', () => {
 })
 
 btnStop.addEventListener('click', () => {
-    console.log('si')
     videoPlayer.pause();
     videoPlayer.currentTime = 0;
     iconPlay[0].classList.remove('fa-pause');

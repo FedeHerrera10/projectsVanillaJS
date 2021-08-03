@@ -324,7 +324,7 @@ input[type="number"]:focus ~ .error {
   main {
     max-width: 1300px;
     margin: 0 auto;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 40%;
   }
 
   .history h2,
